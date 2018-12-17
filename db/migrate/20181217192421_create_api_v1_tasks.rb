@@ -3,7 +3,7 @@ class CreateAPIV1Tasks < ActiveRecord::Migration[5.1]
     create_table :tasks do |t|
       t.string :title
       t.string :description
-      t.references :project, foreign_key: true
+      t.references :project
 
       t.timestamps
     end

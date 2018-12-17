@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  namespace :api do
+    namespace :v1 do
+      resources :tasks
+    end
+  end
   scope module: :api do
     scope module: :v1 do
       resources :projects
