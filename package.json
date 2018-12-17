@@ -12,5 +12,8 @@
   },
   "devDependencies": {
     "webpack-dev-server": "2.11.2"
+  },
+  "scripts": {
+    "analyzer": "node_modules/.bin/webpack --config config/webpack/production.js --profile --json > .stats.json && node_modules/.bin/webpack-bundle-analyzer .stats.json"
   }
 }

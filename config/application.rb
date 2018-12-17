@@ -28,6 +28,12 @@ module Siteplanner
     # Only loads a smaller set of middleware suitable for API only apps.
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
+
+    config.app_generators do |g|
+      g.scaffold = :scaffold_controller
+      g.template_engine = :haml
+    end
+
     config.api_only = true
   end
 end
